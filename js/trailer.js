@@ -12,7 +12,6 @@ g = cvs.getContext('2d');
 const fg = fxc.getContext('2d');
 g.imageSmoothingEnabled = false;
 
-const FILM_URL = 'https://khai293.github.io/heart-journey/';
 const IDX = {}; SCENES.forEach((s, i) => IDX[s.name] = i);
 
 /* ---------- the cut ----------
@@ -114,8 +113,6 @@ function drawTitleCard(lt) {
     { a: seg(lt, 0.6, 1.6), weight: 700, font: 'Georgia,"Palatino Linotype",serif', glow: 'rgba(255,90,130,0.8)', glowR: 14 });
   txt('MỘT BỘ PHIM PIXEL — KHÔNG LỜI', 192, 146, 8, 'rgba(255,231,220,0.78)',
     { a: seg(lt, 1.4, 2.4), spacing: 3.5 });
-  txt('khai293.github.io/heart-journey', 192, 198, 7, 'rgba(255,255,255,0.38)',
-    { a: seg(lt, 2.2, 3.2) });
   petals(lt, 8, { x0: 30, x1: 354, y0: 10, y1: 200 }, 0.4);
 }
 /* poster shared by menu + end card */
@@ -334,7 +331,6 @@ document.getElementById('ui').addEventListener('click', e => e.stopPropagation()
 document.getElementById('btnAgain').addEventListener('click', e => {
   e.stopPropagation(); startTrailer();
 });
-document.getElementById('btnFilm').addEventListener('click', e => e.stopPropagation());
 
 wrap.addEventListener('click', () => {
   if (state === 'menu') { startTrailer(); return; }
